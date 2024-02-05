@@ -25,12 +25,29 @@ static void	print_title(void)
 	switch_print(GAME_ON, "%s\n", GAME_TITLE);
 }
 
+static void	switch_color(const char c)
+{
+	if (c == 0)
+		attron(COLOR_PAIR(8));
+	else
+		attron(COLOR_PAIR(c));
+}
+
+static void	end_color(void)
+{
+	attroff(COLOR_PAIR(0));
+}
+
 static void print_table_with_falling_mino(const bool situation, const t_tetris *tetris, int score, char **empty_map_with_mino)
 {
 	for (int row_i = 0; row_i < ROWS; row_i++)
 	{
 		for (int col_i = 0; col_i < COLUMNS; col_i++)
+		{
+			switch_color(tetris->table[row_i][col_i] + empty_map_with_mino[row_i][col_i]);
 			switch_print(situation, "%c ", (tetris->table[row_i][col_i] || empty_map_with_mino[row_i][col_i]) ? MAP_FULL : MAP_EMPTY);
+			end_color();
+		}
 		switch_print(situation, "\n");
 	}
 	if (situation == GAME_OVER)

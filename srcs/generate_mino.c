@@ -11,8 +11,8 @@ static const t_mino Tetromino[MINO_TYPES] =
 	{
 		// S mino
 		.array = (char *[]) {
-			(char []){0, 1, 1},
-			(char []){1, 1, 0},
+			(char []){0, 4, 4},
+			(char []){4, 4, 0},
 			(char []){0, 0, 0}
 		},
 		.size = 3
@@ -20,8 +20,8 @@ static const t_mino Tetromino[MINO_TYPES] =
 	{
 		// Z mino
 		.array = (char *[]) {
-			(char []){1, 1, 0},
-			(char []){0, 1, 1},
+			(char []){2, 2, 0},
+			(char []){0, 2, 2},
 			(char []){0, 0, 0}
 		},
 		.size = 3
@@ -29,8 +29,8 @@ static const t_mino Tetromino[MINO_TYPES] =
 	{
 		// T mino
 		.array = (char *[]) {
-			(char []){0, 1, 0},
-			(char []){1, 1, 1},
+			(char []){0, 3, 0},
+			(char []){3, 3, 3},
 			(char []){0, 0, 0}
 		},
 		.size = 3
@@ -38,8 +38,8 @@ static const t_mino Tetromino[MINO_TYPES] =
 	{
 		// J mino
 		.array = (char *[]) {
-			(char []){1, 0, 0},
-			(char []){1, 1, 1},
+			(char []){4, 0, 0},
+			(char []){4, 4, 4},
 			(char []){0, 0, 0}
 		},
 		.size = 3
@@ -47,8 +47,8 @@ static const t_mino Tetromino[MINO_TYPES] =
 	{
 		// L mino
 		.array = (char *[]) {
-			(char []){0, 0, 1},
-			(char []){1, 1, 1},
+			(char []){0, 0, 5},
+			(char []){5, 5, 5},
 			(char []){0, 0, 0}
 		},
 		.size = 3
@@ -56,8 +56,8 @@ static const t_mino Tetromino[MINO_TYPES] =
 	{
 		// O mino
 		.array = (char *[]) {
-			(char []){1, 1},
-			(char []){1, 1}
+			(char []){6, 6},
+			(char []){6, 6}
 		},
 		.size = 2
 	},
@@ -65,7 +65,7 @@ static const t_mino Tetromino[MINO_TYPES] =
 		// I mino
 		.array = (char *[]) {
 			(char []){0, 0, 0, 0},
-			(char []){1, 1, 1, 1},
+			(char []){7, 7, 7, 7},
 			(char []){0, 0, 0, 0},
 			(char []){0, 0, 0, 0}
 		},
